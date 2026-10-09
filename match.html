@@ -1,4 +1,101 @@
-<!DOCTYPE html><html lang="en"><head><title>Find your match | Clarins Lip Concept</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Jost:wght@400;500&display=swap" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link href="style.css" rel="stylesheet"></head><body><header><nav class="navbar navbar-expand-md"><div class="container-fluid"><a class="navbar-brand" href="index.html">Lip Perfector &amp; Lip Oil<small>a Clarins concept</small></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Menu"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="menu"><ul class="navbar-nav ms-auto"><li><a class="nav-link" href="index.html">Home</a></li><li><a class="nav-link" href="perfectors.html">Lip Perfector</a></li><li><a class="nav-link" href="oils.html">Lip Oil</a></li><li><a class="nav-link active" href="match.html">Find your match</a></li></ul></div></div></nav></header><main><div class="row g-5"><div class="col-md-6"><h1>Find your match</h1><p>A few quick questions.</p><form id="quiz" class="mt-4"><fieldset class="mb-4"><legend>Product</legend><div class="form-check"><input class="form-check-input" type="radio" name="product" id="product0" value="perfector" checked><label class="form-check-label" for="product0">Lip Perfector</label></div><div class="form-check"><input class="form-check-input" type="radio" name="product" id="product1" value="oil"><label class="form-check-label" for="product1">Lip Oil</label></div></fieldset>
-<div class="f-perf"><div class="mb-4"><label class="form-label" for="tone">Skin tone</label><select class="form-select" id="tone" name="tone"><option value="light">Light</option><option value="medium">Medium</option><option value="deep">Deep</option></select></div><fieldset class="mb-4"><legend>Finish</legend><div class="form-check"><input class="form-check-input" type="radio" name="finish" id="finish0" value="glow" checked><label class="form-check-label" for="finish0">Glow</label></div><div class="form-check"><input class="form-check-input" type="radio" name="finish" id="finish1" value="tint"><label class="form-check-label" for="finish1">Tint</label></div><div class="form-check"><input class="form-check-input" type="radio" name="finish" id="finish2" value="shimmer"><label class="form-check-label" for="finish2">Shimmer</label></div></fieldset></div>
-<div class="f-oil"><fieldset class="mb-4"><legend>Mood</legend><div class="form-check"><input class="form-check-input" type="radio" name="mood" id="mood0" value="soft" checked><label class="form-check-label" for="mood0">Soft</label></div><div class="form-check"><input class="form-check-input" type="radio" name="mood" id="mood1" value="warm"><label class="form-check-label" for="mood1">Warm</label></div><div class="form-check"><input class="form-check-input" type="radio" name="mood" id="mood2" value="bold"><label class="form-check-label" for="mood2">Bold</label></div><div class="form-check"><input class="form-check-input" type="radio" name="mood" id="mood3" value="deep"><label class="form-check-label" for="mood3">Deep</label></div></fieldset></div>
-<button class="btn-ink" type="submit">Show my match</button></form></div><div class="col-md-6"><article class="viewer" id="result" data-product="perfector"><div class="stage"><img class="v-img idle" src="images/perfector-rosewood.jpg" alt=""></div><div class="info"><p class="v-name">Your match</p><p class="v-note" aria-live="polite">Answer the questions to see your match.</p></div></article></div></div></main><footer>Student concept project, not affiliated with Clarins. Product photos: Clarins (clarins.com), used for this student project. Fonts: Bodoni Moda and Jost (Google Fonts).</footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Find your match | Clarins Lip Concept</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Jost:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid"><a class="navbar-brand" href="index.html">Lip Perfector &amp; Lip Oil<small>a
+                        Clarins concept</small></a><button class="navbar-toggler" data-bs-toggle="collapse"
+                    data-bs-target="#menu" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="perfectors.html">Lip Perfector</a></li>
+                        <li><a class="nav-link" href="oils.html">Lip Oil</a></li>
+                        <li><a class="nav-link active" href="match.html">Find your match</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="row g-5">
+            <div class="col-md-6">
+                <h1>Find your match</h1>
+                <p>A few quick questions.</p>
+                <form id="quiz" class="mt-4">
+                    <fieldset class="mb-4">
+                        <legend>Product</legend>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="product"
+                                id="product0" value="perfector" checked><label class="form-check-label"
+                                for="product0">Lip Perfector</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="product"
+                                id="product1" value="oil"><label class="form-check-label" for="product1">Lip Oil</label>
+                        </div>
+                    </fieldset>
+                    <div class="f-perf">
+                        <div class="mb-4"><label class="form-label" for="tone">Skin tone</label><select
+                                class="form-select" id="tone" name="tone">
+                                <option value="light">Light</option>
+                                <option value="medium">Medium</option>
+                                <option value="deep">Deep</option>
+                            </select></div>
+                        <fieldset class="mb-4">
+                            <legend>Finish</legend>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="finish"
+                                    id="finish0" value="glow" checked><label class="form-check-label"
+                                    for="finish0">Glow</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="finish"
+                                    id="finish1" value="tint"><label class="form-check-label" for="finish1">Tint</label>
+                            </div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="finish"
+                                    id="finish2" value="shimmer"><label class="form-check-label"
+                                    for="finish2">Shimmer</label></div>
+                        </fieldset>
+                    </div>
+                    <div class="f-oil">
+                        <fieldset class="mb-4">
+                            <legend>Mood</legend>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="mood" id="mood0"
+                                    value="soft" checked><label class="form-check-label" for="mood0">Soft</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="mood" id="mood1"
+                                    value="warm"><label class="form-check-label" for="mood1">Warm</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="mood" id="mood2"
+                                    value="bold"><label class="form-check-label" for="mood2">Bold</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="mood" id="mood3"
+                                    value="deep"><label class="form-check-label" for="mood3">Deep</label></div>
+                        </fieldset>
+                    </div>
+                    <button class="btn-ink" type="submit">Show my match</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <article class="viewer" id="result" data-product="perfector">
+                    <div class="stage"><img class="v-img idle" src="images/perfector-rosewood.jpg" alt=""></div>
+                    <div class="info">
+                        <p class="v-name">Your match</p>
+                        <p class="v-note" aria-live="polite">Answer the questions to see your match.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer>Student concept project, not affiliated with Clarins. Product photos: Clarins (clarins.com), used for this
+        student project. Fonts: Bodoni Moda and Jost (Google Fonts).</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
