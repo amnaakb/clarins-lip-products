@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1 - Higher or Lower</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="task1.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="logo">Lip Perfector &amp; Lip Oil</span>
+      <nav>
+        <a href="../index.html">Main site</a>
+        <a href="index.html">Home</a>
+        <a href="task1.html" class="active">Task 1</a>
+        <a href="task2.html">Task 2</a>
+        <a href="task3.html">Task 3</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Higher or Lower</h1>
+    <p class="muted">Will the next product cost more or less than the current one? Equal prices count as a right guess. The prices are sample values made up for the game.</p>
+
+    <div class="stats">
+      <div class="stat">Lives <strong id="lives"></strong></div>
+      <div class="stat">Streak <strong id="streak">0</strong></div>
+      <div class="stat">Best streak <strong id="best">0</strong></div>
+    </div>
+
+    <div class="versus">
+      <div class="card">
+        <p class="label">Current</p>
+        <h2 id="currentName"></h2>
+        <p class="price" id="currentPrice"></p>
+      </div>
+      <div class="card">
+        <p class="label">Next</p>
+        <h2 id="nextName"></h2>
+        <p class="price" id="nextPrice">?</p>
+      </div>
+    </div>
+
+    <div class="actions" id="choices">
+      <button type="button" class="btn" data-choice="higher">Higher</button>
+      <button type="button" class="btn" data-choice="lower">Lower</button>
+      <button type="button" class="btn btn-secondary" id="restart">Restart</button>
+    </div>
+
+    <p id="message" class="message" role="status"></p>
+  </main>
+</body>
+</html>

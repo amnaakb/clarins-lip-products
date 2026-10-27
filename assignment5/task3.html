@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3 - Event ticket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="task3.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="logo">Lip Perfector &amp; Lip Oil</span>
+      <nav>
+        <a href="../index.html">Main site</a>
+        <a href="index.html">Home</a>
+        <a href="task1.html">Task 1</a>
+        <a href="task2.html">Task 2</a>
+        <a href="task3.html" class="active">Task 3</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Book an event ticket</h1>
+    <p class="muted">Fill in the form. The ticket on the right updates while you type.</p>
+
+    <div class="layout">
+      <form id="ticketForm">
+        <div id="formErrors" class="error-summary hidden" role="alert"></div>
+
+        <div class="field">
+          <label for="eventId">Event</label>
+          <select id="eventId" name="eventId" required aria-describedby="eventIdError">
+            <option value="">Choose an event</option>
+          </select>
+          <p class="error-text" id="eventIdError" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" required aria-describedby="dateError">
+          <p class="error-text" id="dateError" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="ticketType">Ticket type</label>
+          <select id="ticketType" name="ticketType" required aria-describedby="ticketTypeError">
+            <option value="">Choose a ticket type</option>
+          </select>
+          <p class="error-text" id="ticketTypeError" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" name="quantity" min="1" max="10" step="1" required aria-describedby="quantityError">
+          <p class="error-text" id="quantityError" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="fullName" required autocomplete="name" aria-describedby="fullNameError">
+          <p class="error-text" id="fullNameError" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="emailError">
+          <p class="error-text" id="emailError" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="promo">Promo code (optional)</label>
+          <input type="text" id="promo" name="promo" maxlength="12" aria-describedby="promoError">
+          <p class="error-text" id="promoError" aria-live="polite"></p>
+        </div>
+
+        <button type="submit" class="btn">Book ticket</button>
+      </form>
+
+      <aside class="ticket" aria-label="Ticket preview">
+        <h2>Ticket preview</h2>
+        <dl>
+          <dt>Event</dt><dd id="pEvent"></dd>
+          <dt>Date</dt><dd id="pDate"></dd>
+          <dt>Type</dt><dd id="pType"></dd>
+          <dt>Quantity</dt><dd id="pQty"></dd>
+          <dt>Name</dt><dd id="pName"></dd>
+          <dt>Email</dt><dd id="pEmail"></dd>
+          <dt>Promo</dt><dd id="pPromo"></dd>
+          <dt>Total</dt><dd id="pTotal"></dd>
+        </dl>
+      </aside>
+    </div>
+
+    <div id="result"></div>
+  </main>
+</body>
+</html>

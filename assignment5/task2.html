@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2 - Lip set configurator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="task2.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="logo">Lip Perfector &amp; Lip Oil</span>
+      <nav>
+        <a href="../index.html">Main site</a>
+        <a href="index.html">Home</a>
+        <a href="task1.html">Task 1</a>
+        <a href="task2.html" class="active">Task 2</a>
+        <a href="task3.html">Task 3</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Lip set configurator</h1>
+    <p class="muted">Pick one item per category and stay inside your budget. Matte and glossy items cannot be mixed. The products and prices are sample data.</p>
+
+    <div class="toolbar card">
+      <label>Budget (€)
+        <input type="number" id="budget" min="1" step="1" value="80">
+      </label>
+      <label>Search
+        <input type="search" id="search" placeholder="Product name">
+      </label>
+      <label>Category
+        <select id="category">
+          <option value="all">All categories</option>
+        </select>
+      </label>
+    </div>
+
+    <p id="message" class="message" role="status"></p>
+
+    <div class="layout">
+      <section>
+        <h2>Products</h2>
+        <div id="products" class="products"></div>
+      </section>
+
+      <aside class="card">
+        <h2>Your set</h2>
+        <div id="selection"></div>
+        <div class="total-line"><span>Total</span><strong id="total">0 €</strong></div>
+        <div class="total-line"><span>Left in budget</span><strong id="left">0 €</strong></div>
+        <progress id="budgetBar" value="0" max="80"></progress>
+        <div class="actions">
+          <button type="button" class="btn" id="save">Save build</button>
+          <button type="button" class="btn btn-secondary" id="clear">Clear</button>
+        </div>
+      </aside>
+    </div>
+
+    <section>
+      <h2>Saved builds</h2>
+      <div id="builds"></div>
+      <div id="compare" class="table-wrap"></div>
+    </section>
+  </main>
+</body>
+</html>
