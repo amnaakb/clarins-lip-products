@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,23 +7,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home | Clarins Lip Concept</title>
 
+    <script src="js/theme.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Jost:wght@400;500&display=swap"
-        rel="stylesheet">
+    <style>
+        .theme-switch {
+            border: 1px solid currentColor;
+            background: transparent;
+            color: inherit;
+            border-radius: 999px;
+            padding: .35rem .8rem;
+            margin: .15rem .4rem;
+            font: inherit;
+            cursor: pointer;
+            white-space: nowrap;
+        }
 
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+        .theme-switch:focus-visible {
+            outline: 3px solid #b56b88;
+            outline-offset: 3px;
+        }
 
-    <link href="style.css" rel="stylesheet">
+        html[data-theme="dark"] {
+            color-scheme: dark;
+        }
+
+        html[data-theme="dark"] body {
+            background: #19161a;
+            color: #f5edf1;
+        }
+
+        html[data-theme="dark"] .navbar,
+        html[data-theme="dark"] header,
+        html[data-theme="dark"] footer {
+            background: #242027;
+            color: #f5edf1;
+        }
+
+        html[data-theme="dark"] .navbar-brand,
+        html[data-theme="dark"] .nav-link {
+            color: #f5edf1;
+        }
+
+        html[data-theme="dark"] .nav-link.active {
+            color: #ffd2e3;
+        }
+
+        html[data-theme="dark"] .navbar-toggler {
+            border-color: #cdbbc6;
+        }
+
+        html[data-theme="dark"] .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        html[data-theme="dark"] .intro,
+        html[data-theme="dark"] .duo,
+        html[data-theme="dark"] .features,
+        html[data-theme="dark"] .viewer,
+        html[data-theme="dark"] .feature,
+        html[data-theme="dark"] .info {
+            background-color: #242027;
+            color: #f5edf1;
+        }
+
+        html[data-theme="dark"] .v-name,
+        html[data-theme="dark"] .v-note {
+            color: #f5edf1;
+        }
+
+        html[data-theme="dark"] .btn-ink {
+            background: #f5edf1;
+            color: #19161a;
+        }
+
+        html[data-theme="dark"] .theme-switch:hover {
+            background: #3a3039;
+        }
+
+        @media (max-width: 767.98px) {
+            .theme-switch {
+                margin: .5rem 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-md">
+        <nav class="navbar navbar-expand-md" aria-label="Main">
             <div class="container-fluid">
 
                 <a class="navbar-brand" href="index.html">
@@ -38,46 +116,72 @@
                     aria-controls="menu"
                     aria-expanded="false"
                     aria-label="Toggle navigation">
-
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav ms-auto">
+
                         <li>
-                            <a class="nav-link active" href="index.html"
-                               aria-current="page">Home</a>
+                            <a class="nav-link active"
+                               href="index.html"
+                               aria-current="page">
+                                Home
+                            </a>
                         </li>
+
                         <li>
                             <a class="nav-link" href="perfectors.html">
                                 Lip Perfector
                             </a>
                         </li>
+
                         <li>
                             <a class="nav-link" href="oils.html">
                                 Lip Oil
                             </a>
                         </li>
+
                         <li>
                             <a class="nav-link" href="match.html">
                                 Find your match
                             </a>
                         </li>
+
                         <li>
-                            <a class="nav-link" href="assignment5/index.html">
-                                Lip Studio
+                            <a class="nav-link" href="cart.html">
+                                Cart
                             </a>
                         </li>
+
+                        <li>
+                            <a class="nav-link" href="profile.html">
+                                Profile
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <button
+                                class="theme-switch"
+                                id="home-theme-switch"
+                                type="button"
+                                aria-label="Switch to dark mode"
+                                aria-pressed="false">
+                                ☾ Dark mode
+                            </button>
+                        </li>
+
                     </ul>
                 </div>
-
             </div>
         </nav>
     </header>
 
     <main>
+
         <section class="intro">
             <h1>Two ways to finish a look.</h1>
+
             <p>
                 The Lip Perfector and the Lip Oil, side by side.
                 Choose a shade on either to see it up close.
@@ -87,6 +191,7 @@
         <section class="duo">
 
             <article class="viewer" data-product="perfector">
+
                 <div class="stage">
                     <img
                         class="v-img"
@@ -112,9 +217,11 @@
                         See the Perfector
                     </a>
                 </div>
+
             </article>
 
             <article class="viewer" data-product="oil">
+
                 <div class="stage">
                     <img
                         class="v-img"
@@ -140,11 +247,13 @@
                         See the Oil
                     </a>
                 </div>
+
             </article>
 
         </section>
 
         <section class="features">
+
             <article class="feature">
                 <h2>Care first</h2>
                 <p>
@@ -155,7 +264,8 @@
             <article class="feature">
                 <h2>Two textures</h2>
                 <p>
-                    A soft tube gloss or a glossy oil, depending on your mood.
+                    A soft tube gloss or a glossy oil,
+                    depending on your mood.
                 </p>
             </article>
 
@@ -165,21 +275,108 @@
                     Answer a few questions and get a shade suggestion.
                 </p>
             </article>
+
         </section>
+
     </main>
 
     <footer>
         Student concept project, not affiliated with Clarins.
         Product photos: Clarins (clarins.com), used for this student project.
         Fonts: Bodoni Moda and Jost (Google Fonts).
+        Layout: Bootstrap 5. Effects: jQuery.
+        Development assistance: ChatGPT and Claude.
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="data.js"></script>
-    <script src="settings.js"></script>
-    <script src="cart.js"></script>
-    <script src="account.js"></script>
-    <script src="script.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/account.js"></script>
+    <script src="js/viewer.js"></script>
+    <script src="js/jquery-effects.js"></script>
+
+    <script>
+        (function () {
+            const button = document.getElementById('home-theme-switch');
+            const storageKey = 'clarins-theme';
+
+            function savedTheme() {
+                try {
+                    return localStorage.getItem(storageKey)
+                        || localStorage.getItem('theme');
+                } catch (error) {
+                    return null;
+                }
+            }
+
+            function setTheme(theme, persist) {
+                const dark = theme === 'dark';
+
+                document.documentElement.setAttribute(
+                    'data-theme',
+                    dark ? 'dark' : 'light'
+                );
+
+                document.documentElement.classList.toggle('dark', dark);
+                document.body.classList.toggle('dark-mode', dark);
+
+                if (button) {
+                    button.textContent = dark
+                        ? '☀ Light mode'
+                        : '☾ Dark mode';
+
+                    button.setAttribute('aria-pressed', String(dark));
+
+                    button.setAttribute(
+                        'aria-label',
+                        dark
+                            ? 'Switch to light mode'
+                            : 'Switch to dark mode'
+                    );
+                }
+
+                if (persist) {
+                    try {
+                        localStorage.setItem(
+                            storageKey,
+                            dark ? 'dark' : 'light'
+                        );
+
+                        localStorage.setItem(
+                            'theme',
+                            dark ? 'dark' : 'light'
+                        );
+                    } catch (error) {
+                        // Storage may be unavailable.
+                    }
+                }
+            }
+
+            setTheme(
+                savedTheme()
+                    || document.documentElement.getAttribute('data-theme')
+                    || 'light',
+                false
+            );
+
+            if (button) {
+                button.addEventListener('click', function () {
+                    const currentTheme =
+                        document.documentElement.getAttribute('data-theme');
+
+                    setTheme(
+                        currentTheme === 'dark' ? 'light' : 'dark',
+                        true
+                    );
+                });
+            }
+        }());
+    </script>
+
+<script src="js/animations.js"></script>
+</body>
 </html>
